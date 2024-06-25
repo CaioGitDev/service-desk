@@ -3,9 +3,9 @@
 }
 
 .menu {
-  @apply bg-secondary-color  text-primary-text-light flex-1;
+  @apply  flex-1;
 }
 
 .content {
-  @apply bg-secondary-color text-primary-text-light overflow-hidden flex-[4];
+  @apply  overflow-hidden flex-[6];
 }

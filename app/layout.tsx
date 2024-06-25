@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './globals.css'
 import styles from './ui/layout.module.css'
+import SideBar from './ui/sidebar/sidebar'
+import SideBarItem from './ui/sidebar/item/sidebar-item'
+import { LuLayoutDashboard } from 'react-icons/lu'
+import { HiOutlineTicket } from 'react-icons/hi2'
 
 const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ['latin'] })
 
@@ -19,7 +23,30 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <div className={styles.container}>
-          <div className={styles.menu}></div>
+          <div className={styles.menu}>
+            <SideBar>
+              <SideBarItem
+                icon={<HiOutlineTicket size={20} />}
+                text="Novo Ticket"
+                alert
+              />
+              <hr className="my-3" />
+              <SideBarItem
+                icon={<LuLayoutDashboard size={20} />}
+                text="Dashboard"
+                active
+              />
+              <SideBarItem
+                icon={<LuLayoutDashboard size={20} />}
+                text="Triagens"
+                alert
+              />
+              <SideBarItem
+                icon={<LuLayoutDashboard size={20} />}
+                text="Tickets"
+              />
+            </SideBar>
+          </div>
           <div className={styles.content}>{children}</div>
         </div>
       </body>
