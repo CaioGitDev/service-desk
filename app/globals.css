@@ -12,6 +12,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+  
 }
 
 a {
@@ -20,7 +21,5 @@ a {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
 }

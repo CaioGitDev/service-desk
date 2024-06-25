@@ -47,7 +47,9 @@ export default function RootLayout({
               />
             </SideBar>
           </div>
-          <div className={styles.content}>{children}</div>
+          <main className="flex flex-col  overflow-y-scroll h-screen w-full flex-grow p-4">
+            {children}
+          </main>
         </div>
       </body>
     </html>
